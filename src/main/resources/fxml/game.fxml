@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import java.net.URL?>
+
+<AnchorPane fx:controller="main.java.com.rk.game.controllers.GameController"
+            xmlns:fx="http://javafx.com/fxml" maxHeight="-Infinity" minHeight="-Infinity" maxWidth="-Infinity"
+            minWidth="-Infinity" prefHeight="-1.0" prefWidth="-1.0">
+
+    <stylesheets>
+        <URL value="@../css/game.css"/>
+    </stylesheets>
+
+    <Canvas fx:id="canvas" onMousePressed="#canvasOnMouseClicked" onKeyPressed="#onEscPressedEvent"/>
+
+    <HBox fx:id="buttons" alignment="CENTER" spacing="10" >
+       <!-- <Button text="X" onMouseEntered="#showButtons" onMouseExited="#hideButtons" onMouseClicked="#showButtons"/>-->
+        <Button fx:id="startButton" onAction="#playButtonAction"/>
+        <Button fx:id="resetButton" onAction="#resetButtonAction"/>
+        <Button fx:id="menuButton" onAction="#menuButtonAction"/>
+        <Button fx:id="screenButton" onAction="#changeScreenSize"/>
+    </HBox>
+</AnchorPane>

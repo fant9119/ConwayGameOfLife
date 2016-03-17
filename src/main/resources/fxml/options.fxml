@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<VBox id="main" fx:controller="main.java.com.rk.game.controllers.OptionsController" xmlns:fx="http://javafx.com/fxml"
+      maxHeight="-Infinity" minHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="-1.0"
+      prefWidth="-1.0" alignment="CENTER" spacing="10">
+
+    <stylesheets>
+        <URL value="@../css/options.css"/>
+    </stylesheets>
+
+    <VBox id="options" alignment="CENTER" spacing="10" maxHeight="-Infinity" minHeight="-Infinity" maxWidth="-Infinity"
+          minWidth="-Infinity" prefHeight="-1.0"
+          prefWidth="-1.0" >
+        <HBox prefWidth="280.0" alignment="CENTER">
+            <Label text="Grid color:" prefWidth="80" alignment="BASELINE_LEFT"/>
+            <ColorPicker fx:id="gridColor"/>
+        </HBox>
+        <HBox prefWidth="280.0" alignment="CENTER">
+            <Label text="Field color:" prefWidth="80" alignment="BASELINE_LEFT"/>
+            <ColorPicker fx:id="fieldColor"/>
+        </HBox>
+        <HBox prefWidth="280.0" alignment="CENTER">
+            <Label text="Life color:" prefWidth="80" alignment="BASELINE_LEFT"/>
+            <ColorPicker fx:id="lifeColor"/>
+        </HBox>
+        <HBox prefWidth="280.0" spacing="10" alignment="CENTER">
+            <Label text="Rows:" prefWidth="40" alignment="BASELINE_LEFT"/>
+            <TextField fx:id="rowNumberField" prefWidth="60" onKeyPressed="#checkInput"/>
+            <Label text="Columns:" prefWidth="60" alignment="BASELINE_LEFT"/>
+            <TextField fx:id="columnNumberField" prefWidth="60" onKeyPressed="#checkInput"/>
+        </HBox>
+        <HBox prefWidth="280.0" alignment="CENTER">
+            <Label text="Move delay, ms:" prefWidth="110" alignment="BASELINE_LEFT"/>
+            <TextField fx:id="delayField" prefWidth="60" onKeyPressed="#checkInput"/>
+        </HBox>
+        <Button prefWidth="150" text="Restore defaults" onAction="#restoreButtonAction"/>
+        <Button prefWidth="150" fx:id="menuButton" text="Menu" onAction="#menuButtonAction"/>
+        <padding>
+            <Insets
+                    bottom="20.0"
+                    left="20.0"
+                    right="20.0"
+                    top="20.0"/>
+        </padding>
+    </VBox>
+    <padding>
+        <Insets
+                top="50.0"/>
+    </padding>
+</VBox>
